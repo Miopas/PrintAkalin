@@ -7,18 +7,16 @@
 
 线稿可以用这个工具提取：線稿提取器[https://github.com/FlandreDaisuki/Outline-Extractor]
 
-# Need
+# Requirements
 Python 3
-
 numpy
-
 pillow
 
 # Usage
 python3 run.py image_file
 
 # Example
-`python3 run.sh big_akalin.png`
+`python3 run.py big_akalin.png`
 
 ![img](https://github.com/Miopas/PrintAkalin/raw/master/example.gif)
 
