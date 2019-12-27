@@ -27,7 +27,8 @@ ori_img = Image.open(img_file)
 
 # Zoom in image as double width of the origin image
 ##img.size[0] is weight, img.size[1] is height 
-new_img = ori_img.transform((ori_img.size[0] * 2, ori_img.size[1]), Image.EXTENT, [0, 0, ori_img.size[0], ori_img.size[1]])
+zoom_rate = 0.25
+new_img = ori_img.transform((int(ori_img.size[0] * 2 * zoom_rate), int(ori_img.size[1] * zoom_rate)), Image.EXTENT, [0, 0, ori_img.size[0], ori_img.size[1]])
 
 # Transform image into a mattix
 img=np.array(new_img) 
