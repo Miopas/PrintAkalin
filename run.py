@@ -18,16 +18,16 @@ Define the background pixel and the symbol for the background and outline
 Notice: the default background pixcel is white
 '''
 bg_pix = np.array([255, 255, 255])
-backgroud_sym = '0'
-outline_sym = '1'
-alpha = 8 # the parameter to control the size of final result. The bigget alpha is, the smaller the result is.
+backgroud_sym = ' ' # use space
+outline_sym = '|'
+alpha = 5 # the parameter to control the size of final result. The bigget alpha is, the smaller the result is.
 
 # Load image
 ori_img = Image.open(img_file)
 
 # Zoom in image as double width of the origin image
 ##img.size[0] is weight, img.size[1] is height 
-zoom_rate = 0.25
+zoom_rate = 0.5
 new_img = ori_img.transform((int(ori_img.size[0] * 2 * zoom_rate), int(ori_img.size[1] * zoom_rate)), Image.EXTENT, [0, 0, ori_img.size[0], ori_img.size[1]])
 
 # Transform image into a mattix
